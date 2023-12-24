@@ -1,4 +1,9 @@
-# Projet de Reconnaissance de la Parole
+# Projet de Reconnaissance de la Parole BE2
+
+
+## Technologies Utilisées
+- Python 3.9.12
+- Librairies : NumPy, Librosa, Matplotlib, SciPy
 
 ## Partie 1
 
@@ -22,9 +27,6 @@ L'algorithme des k plus proches voisins est utilisé pour classer les données d
 ### Étape 6 : Visualisation des Performances
 Les performances du modèle pour différentes valeurs de k sont visualisées à l'aide de graphiques, montrant l'exactitude, le score F1 et le rappel.
 
-## Technologies Utilisées
-- Python
-- Librairies : NumPy, Librosa, Matplotlib, SciPy
 
-## Conclusion
+## Conclusion de la partie 1
 Cette première partie du projet démontre la mise en place d'un système de base pour la reconnaissance de mots isolés en utilisant des méthodes
