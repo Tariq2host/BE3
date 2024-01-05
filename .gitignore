@@ -8,6 +8,8 @@ __pycache__/
 
 /digit_dataset
 
+/__MACOSX
+
 # Distribution / packaging
 .Python
 build/
