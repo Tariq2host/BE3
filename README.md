@@ -1,11 +1,36 @@
 # Projet de Reconnaissance de la Parole BE2
 
 
+# Table des Matières
+1. [Partie 1](#partie-1)
+   1. [Technologies Utilisées](#technologies-utilisées)
+   2. [Étape 1 : Lecture des Fichiers Audio](#étape-1--lecture-des-fichiers-audio)
+   3. [Étape 2 : Calcul des Coefficients LPC](#étape-2--calcul-des-coefficients-lpc)
+   4. [Étape 3 : Calcul de la Matrice des Distances DTW](#étape-3--calcul-de-la-matrice-des-distances-dtw)
+   5. [Étape 4 : Séparation des Données en Ensembles d'Entraînement et de Test](#étape-4--séparation-des-données-en-ensembles-dentraînement-et-de-test)
+   6. [Étape 5 : Classification k-NN](#étape-5--classification-k-nn)
+   7. [Étape 6 : Visualisation des Performances](#étape-6--visualisation-des-performances)
+   8. [Conclusion de la Partie 1](#conclusion-de-la-partie-1)
+
+2. [Partie 2 : Système de Reconnaissance de la Parole avec MFCC et HMM](#partie-2--système-de-reconnaissance-de-la-parole-avec-mfcc-et-hmm)
+   1. [Description](#description)
+   2. [Technologies Utilisées](#technologies-utilisées-1)
+   3. [Processus](#processus)
+       1. [Étape 1 : Extraction des Coefficients MFCC](#étape-1--extraction-des-coefficients-mfcc)
+       2. [Étape 2 : Préparation des Données pour les HMM](#étape-2--préparation-des-données-pour-les-hmm)
+       3. [Étape 3 : Entraînement des Modèles HMM](#étape-3--entraînement-des-modèles-hmm)
+       4. [Étape 4 : Division du Jeu de Données](#étape-4--division-du-jeu-de-données)
+       5. [Étape 5 : Reconnaissance et Classification](#étape-5--reconnaissance-et-classification)
+       6. [Évaluation du Modèle](#évaluation-du-modèle)
+   4. [Conclusion](#conclusion)
+
+
+
+# Partie 1
+
 ## Technologies Utilisées
 - Python 3.9.12
 - Librairies : NumPy, Librosa, Matplotlib, SciPy
-
-## Partie 1
 
 Ce projet implémente un système simple de reconnaissance de mots isolés en anglais. Le système utilise une paramétrisation du signal de parole à l'aide des coefficients LPC (Linear Predictive Coding) et une reconnaissance basée sur l'algorithme des k plus proches voisins (k-NN), en utilisant la distance élastique (Dynamic Time Warping - DTW).
 
@@ -90,7 +115,15 @@ def classify_audio(models, test_audio_file):
 Le modèle est évalué sur l'ensemble de données de test en utilisant des métriques telles que l'exactitude, le rappel et le score F1.
 
 ```python
-# ... (code pour évaluer le modèle) ...
+def evaluate_model(models: dict, test_features: list, true_labels: list) -> tuple[float, float, float]:
+    """
+    Évalue le modèle en utilisant les caractéristiques MFCC des données de test.
+
+    :param models: Dictionnaire des modèles HMM entraînés.
+    :param test_features: Liste des caractéristiques MFCC pour les données de test.
+    :param true_labels: Liste des vraies étiquettes pour les données de test.
+    :return: Tuple contenant l'exactitude, le rappel et le score F1.
+    """
 ```
 
 ## Conclusion
