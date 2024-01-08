@@ -141,5 +141,10 @@ def evaluate_model(models: dict, test_features: list, true_labels: list) -> tupl
 ```
 
 ## Conclusion
-Cette approche utilise des techniques avancées de traitement du signal et d'apprentissage automatique pour créer un système de reconnaissance de la parole robuste et efficace.
-```
+Cette approche utilise des techniques avancées de traitement du signal et d'apprentissage automatique pour créer un système de reconnaissance de la parole robuste et efficace en utilisant les coeficient MFCC. En résumé les résultats trouvée à l'aide de cette méthode:
+
+- Exactitude (Accuracy) : 0,6833 (68,33 %) - Cela signifie que 68,33 % des prédictions du modèle étaient correctes. En d'autres termes, le modèle a correctement identifié la classe des fichiers audio plus des deux tiers du temps, ce qui est une performance raisonnablement bonne.
+
+- Rappel (Recall) : 0,6833 (68,33 %) - Le rappel est également de 68,33 %, ce qui indique que le modèle est capable d'identifier correctement 68,33 % de toutes les instances positives à travers les classes.
+
+- Score F1 : 0,6874 (68,74 %) - Le score F1, qui équilibre la précision et le rappel, est de 68,74 %. C'est un bon indicateur que le modèle a une performance équilibrée en termes de précision et de rappel.
