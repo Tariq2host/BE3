@@ -2,7 +2,7 @@
 
 
 # Table des Matières
-1. [Partie 1](#partie-1)
+1. [Partie 1 Système de reconnaissance de parole en utilisant coefficients LPC et une reconnaissance basée sur l'algorithme k-NN](#partie-1)
    1. [Technologies Utilisées](#technologies-utilisées)
    2. [Étape 1 : Lecture des Fichiers Audio](#étape-1--lecture-des-fichiers-audio)
    3. [Étape 2 : Calcul des Coefficients LPC](#étape-2--calcul-des-coefficients-lpc)
@@ -26,7 +26,8 @@
 
 
 
-# Partie 1 Système de reconnaissance de parole en utilisant coefficients LPC (Linear Predictive Coding) et une reconnaissance basée sur l'algorithme des k plus proches voisins (k-NN)
+# Partie 1
+Système de reconnaissance de parole en utilisant coefficients LPC et une reconnaissance basée sur l'algorithme k-NN
 
 ## Technologies Utilisées
 - Python 3.9.12
