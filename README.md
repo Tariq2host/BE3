@@ -2,7 +2,7 @@
 
 
 # Table des Matières
-1. [Partie 1](#partie-1)
+1. [Partie 1 Système de reconnaissance de parole en utilisant coefficients LPC et une reconnaissance basée sur l'algorithme k-NN](#partie-1)
    1. [Technologies Utilisées](#technologies-utilisées)
    2. [Étape 1 : Lecture des Fichiers Audio](#étape-1--lecture-des-fichiers-audio)
    3. [Étape 2 : Calcul des Coefficients LPC](#étape-2--calcul-des-coefficients-lpc)
@@ -27,6 +27,7 @@
 
 
 # Partie 1
+Système de reconnaissance de parole en utilisant coefficients LPC et une reconnaissance basée sur l'algorithme k-NN
 
 ## Technologies Utilisées
 - Python 3.9.12
@@ -54,7 +55,20 @@ Les performances du modèle pour différentes valeurs de k sont visualisées à 
 
 
 ## Conclusion de la partie 1
-Cette première partie du projet démontre la mise en place d'un système de base pour la reconnaissance de mots isolés en utilisant des méthodes
+Cette première partie du projet démontre la mise en place d'un système de base pour la reconnaissance de mots isolés en utilisant une méthode à l'aide des coefficients LPC (Linear Predictive Coding) et une reconnaissance basée sur l'algorithme des k plus proches voisins (k-NN). En résumé les résultats trouvées:
+
+Exactitude (0.31) : Seulement environ 30% des prédictions sont correctes. Cela indique une faible performance globale du modèle.
+Rappel (0.31) : Le modèle détecte correctement environ 31% des instances positives de chaque classe. Un faible rappel indique que de nombreux cas positifs réels ne sont pas correctement identifiés par le modèle.
+Score F1 (0.30) : Ce score, qui équilibre la précision et le rappel, est également bas. Un score F1 faible suggère que le modèle n'est ni précis ni complet dans ses prédictions.
+Pour améliorer le modèle on peut:
+
+Augmentation de l'Ordre des LPC : Un ordre plus élevé pour les coefficients LPC peut capturer plus de détails dans les signaux vocaux.
+
+Normalisation des Données : On normalisant les données, on peut réduire les variations d'amplitude.
+
+Optimisation des Paramètres : Expérimentez avec différents nombres de voisins (k) dans l'algorithme k-NN.
+
+Données Supplémentaires : Ajouter plus de données d'entraînement pour améliorer la capacité du modèle à généraliser.
 
 
 # Partie 2 : Système de Reconnaissance de la Parole avec MFCC et HMM
@@ -127,5 +141,10 @@ def evaluate_model(models: dict, test_features: list, true_labels: list) -> tupl
 ```
 
 ## Conclusion
-Cette approche utilise des techniques avancées de traitement du signal et d'apprentissage automatique pour créer un système de reconnaissance de la parole robuste et efficace.
-```
+Cette approche utilise des techniques avancées de traitement du signal et d'apprentissage automatique pour créer un système de reconnaissance de la parole robuste et efficace en utilisant les coeficient MFCC. En résumé les résultats trouvée à l'aide de cette méthode:
+
+- Exactitude (Accuracy) : 0,6833 (68,33 %) - Cela signifie que 68,33 % des prédictions du modèle étaient correctes. En d'autres termes, le modèle a correctement identifié la classe des fichiers audio plus des deux tiers du temps, ce qui est une performance raisonnablement bonne.
+
+- Rappel (Recall) : 0,6833 (68,33 %) - Le rappel est également de 68,33 %, ce qui indique que le modèle est capable d'identifier correctement 68,33 % de toutes les instances positives à travers les classes.
+
+- Score F1 : 0,6874 (68,74 %) - Le score F1, qui équilibre la précision et le rappel, est de 68,74 %. C'est un bon indicateur que le modèle a une performance équilibrée en termes de précision et de rappel.
