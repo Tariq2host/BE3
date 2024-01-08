@@ -26,7 +26,7 @@
 
 
 
-# Partie 1
+# Partie 1 Système de reconnaissance de parole en utilisant coefficients LPC (Linear Predictive Coding) et une reconnaissance basée sur l'algorithme des k plus proches voisins (k-NN)
 
 ## Technologies Utilisées
 - Python 3.9.12
@@ -54,7 +54,20 @@ Les performances du modèle pour différentes valeurs de k sont visualisées à 
 
 
 ## Conclusion de la partie 1
-Cette première partie du projet démontre la mise en place d'un système de base pour la reconnaissance de mots isolés en utilisant des méthodes
+Cette première partie du projet démontre la mise en place d'un système de base pour la reconnaissance de mots isolés en utilisant une méthode à l'aide des coefficients LPC (Linear Predictive Coding) et une reconnaissance basée sur l'algorithme des k plus proches voisins (k-NN). En résumé les résultats trouvées:
+
+Exactitude (0.31) : Seulement environ 30% des prédictions sont correctes. Cela indique une faible performance globale du modèle.
+Rappel (0.31) : Le modèle détecte correctement environ 31% des instances positives de chaque classe. Un faible rappel indique que de nombreux cas positifs réels ne sont pas correctement identifiés par le modèle.
+Score F1 (0.30) : Ce score, qui équilibre la précision et le rappel, est également bas. Un score F1 faible suggère que le modèle n'est ni précis ni complet dans ses prédictions.
+Pour améliorer le modèle on peut:
+
+Augmentation de l'Ordre des LPC : Un ordre plus élevé pour les coefficients LPC peut capturer plus de détails dans les signaux vocaux.
+
+Normalisation des Données : On normalisant les données, on peut réduire les variations d'amplitude.
+
+Optimisation des Paramètres : Expérimentez avec différents nombres de voisins (k) dans l'algorithme k-NN.
+
+Données Supplémentaires : Ajouter plus de données d'entraînement pour améliorer la capacité du modèle à généraliser.
 
 
 # Partie 2 : Système de Reconnaissance de la Parole avec MFCC et HMM
